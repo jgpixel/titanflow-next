@@ -84,6 +84,10 @@ body {
 	.burger-bar {
 		@apply h-[2px] w-full bg-zinc-500 rounded-lg;
 	}
+
+	.page-title {
+		@apply font-bold text-5xl md:text-4xl mt-4 text-center;
+	}
 }
 
 /* blog content */

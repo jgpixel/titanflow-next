@@ -58,10 +58,12 @@ export default function Article({ post }) {
     </Head>
 
     return (
-        <div className='my-12'>
-            <h1 className='font-bold text-4xl w-full md:text-3xl'>{title}</h1>
-            <h2 className='font-bold text-2xl w-full mt-5'>{category.name}</h2>
-            <div dangerouslySetInnerHTML={{ __html: content.html }} className='blog-content'></div>
+        <div className='flex justify-center items-center flex-col'>
+            <div className='my-12 w-70% md:w-full'>
+                <h1 className='font-bold text-4xl w-full md:text-3xl'>{title}</h1>
+                <h2 className='font-bold text-2xl w-full mt-2 mb-8'>{category.name}</h2>
+                <div dangerouslySetInnerHTML={{ __html: content.html }} className='blog-content'></div>
+            </div>
         </div>
     );
 }

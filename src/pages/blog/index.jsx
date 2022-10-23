@@ -33,17 +33,16 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }) {
-    console.log(posts);
     return (
         <>
             <Head>
                 <title>Blog</title>
             </Head>
             <div className='flex flex-col justify-center items-center mb-10'>
-                <h1 className='font-bold text-5xl md:text-4xl mt-3 text-center'>Options Flow Daily</h1>
-                <div className='w-full my-12 grid justify-start gap-10 grid-cols-[repeat(auto-fit,minmax(8em,1fr))] md:grid-cols-[repeat(1,minmax(4em,1fr))]'>
+                <h1 className='page-title'>Options Flow Daily</h1>
+                <div className='w-full my-12 grid justify-start gap-x-12 gap-y-[4rem] grid-cols-[repeat(auto-fit,minmax(22em,1fr))] md:grid-cols-[repeat(1,minmax(4em,1fr))]'>
                     {
-                        posts.map(post => (
+                        [...posts, ...posts, ...posts, ...posts, ...posts].map(post => (
                             <BlogCard
                                 key={useId()}
                                 title={post.title}

@@ -71,8 +71,8 @@ export default function Pricing() {
     const [isMonthlyBilling, setIsMonthlyBilling] = useState(true);
 
     return (
-        <div className='flex flex-col justify-center items-center mb-10'>
-            <h1 className='font-bold text-5xl md:text-4xl mt-3 text-center'>Access Real-time Options Flow</h1>
+        <div className='flex flex-col justify-center items-center mb-12'>
+            <h1 className='page-title'>Access Real-time Options Flow</h1>
             <div className='border border-sky-500 p-0 rounded my-12'>
                 <button onClick={() => setIsMonthlyBilling(true)} className={`px-7 py-2 rounded-l-[2px] transition-colors ${isMonthlyBilling ? 'bg-sky-500' : 'hover:bg-sky-900 text-sky-500 rounded-l-[0.2rem]'}`}>Monthly</button>
                 <button onClick={() => setIsMonthlyBilling(false)} className={`px-7 py-2 rounded-r-[2px] transition-colors ${!isMonthlyBilling ? 'bg-sky-500' : 'hover:bg-sky-900 text-sky-500 rounded-r-[0.2rem]'}`}>Yearly</button>
