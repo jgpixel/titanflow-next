@@ -31,7 +31,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className='flex justify-between items-center my-4 w-[calc(100vw_-_60px)] md:relative'>
+        <nav className='flex justify-between items-center my-4 w-[calc(100vw_-_60px)] md:relative md:w-[clamp(300px,1600px,calc(80%_+_40px))]'>
             <div className='w-30%'>
                 <Link href='/'>
                     <a className='flex justify-start items-center'>
@@ -44,9 +44,7 @@ export default function Navbar() {
                     </a>
                 </Link>
             </div>
-            <ul className={`flex justify-between items-center gap-x-6 w-38% list-none max-w-[400px]
-                            md:absolute md:left-1/2 md:top-[50px] md:-translate-x-1/2 md:flex-col md:gap-y-3 md:bg-black
-                            md:w-[100%] md:p-4 md:rounded-md ${isOpen ? 'flex' : 'hidden'} -md:flex md:max-w-none
+            <ul className={`flex justify-between items-center gap-x-6 w-38% list-none max-w-[400px] md:absolute md:left-1/2 md:top-[50px] md:-translate-x-1/2 md:flex-col md:gap-y-3 md:bg-black md:w-[100%] md:p-4 md:rounded-md ${isOpen ? 'flex' : 'hidden'} -md:flex md:max-w-none
             `}>
                 {navLinks.map((link) => {
                     return (
@@ -68,7 +66,7 @@ export default function Navbar() {
                     );
                 })}
             </ul>
-            <div onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)} className='flex justify-center items-center p-[6px] rounded-sm cursor-pointer w-[32px] height-[32px] select-none hover:bg-zinc-800 transition-colors -md:hidden'>
+            <div onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)} className='flex justify-center items-center p-[6px] rounded-[4px] cursor-pointer w-[32px] height-[32px] select-none hover:bg-zinc-800 transition-colors -md:hidden'>
                 <div className={`w-[20px] ${isOpen ? 'hidden' : 'block'}`}>
                     <div className='burger-bar mb-[5px]'></div>
                     <div className='burger-bar mb-[5px]'></div>
@@ -101,12 +99,12 @@ function NavLink({ path, text, targetIsBlank }) {
     const router = useRouter();
 
     return (
-        <div className={`nav-link w-full text-center' ${router.pathname === path ? 'text-white' : 'text-zinc-500'}`}>
+        <div className={`w-full text-center' ${router.pathname === path ? 'text-white' : 'text-zinc-500'}`}>
             <Link
                 href={`${path}`}
                 target={targetIsBlank ? '_blank' : '_self'}
             >
-                <a>{text}</a>
+                <a className='nav-link'>{text}</a>
             </Link>
         </div>
     );
