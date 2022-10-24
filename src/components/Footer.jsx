@@ -28,10 +28,10 @@ export default function Footer() {
                     </div>
                     <div className='w-40% flex justify-end md:w-full md:justify-center'>
                         <div className='block mr-8'>
-                            <Link href='terms'><a>Terms of Use</a></Link>
+                            <Link href='/terms'><a>Terms of Use</a></Link>
                         </div>
                         <div className='block'>
-                            <Link href='privacy'><a>Privacy Policy</a></Link>
+                            <Link href='/privacy'><a>Privacy Policy</a></Link>
                         </div>
                     </div>
                 </div>

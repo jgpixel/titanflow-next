@@ -36,12 +36,11 @@ export default function Features() {
                             </div>
                             <div className='w-50% md:w-full'>
                                 <h4 className='text-sky-500 text-lg font-bold'>{titleSmall}</h4>
-                                <h3 className='text-4xl font-bold my-3'>{titleLarge}</h3>
+                                <h3 className='text-4xl font-bold my-3 md:text-2xl'>{titleLarge}</h3>
                                 <p className='text-zinc-500'>{description}</p>
                             </div>
                         </li>
-                    )
-                    )
+                    ))
                 }
             </ul>
         </section>
