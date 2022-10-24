@@ -43,7 +43,7 @@ export default function Blog({ posts }) {
                 <h1 className='page-title'>Options Flow Daily</h1>
                 <div className='w-full my-12 grid justify-start gap-x-12 gap-y-[4rem] grid-cols-[repeat(auto-fit,minmax(22em,1fr))] md:grid-cols-[repeat(1,minmax(4em,1fr))]'>
                     {
-                        [...posts, ...posts, ...posts, ...posts, ...posts].map(({ title, category, thumbnail, thumbnailAlt, content, slug }) => (
+                        posts.map(({ title, category, thumbnail, thumbnailAlt, content, slug }) => (
                             <BlogCard
                                 key={useId()}
                                 title={title}
