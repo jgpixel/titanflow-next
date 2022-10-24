@@ -1,4 +1,3 @@
-require("dotenv").config;
 import { GraphQLClient, gql } from 'graphql-request';
 import Head from 'next/head';
 

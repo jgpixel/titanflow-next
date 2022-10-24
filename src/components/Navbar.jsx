@@ -95,12 +95,12 @@ function NavLink({ path, text, targetIsBlank }) {
     const router = useRouter();
 
     return (
-        <div className={`w-full text-center' ${router.pathname === path ? 'text-white' : 'text-zinc-500'}`}>
+        <div className={`w-full text-center'`}>
             <Link
                 href={`${path}`}
                 target={targetIsBlank ? '_blank' : '_self'}
             >
-                <a className='nav-link'>{text}</a>
+                <a className={`nav-link ${router.pathname === path ? 'text-white' : 'text-zinc-500'}`}>{text}</a>
             </Link>
         </div>
     );
