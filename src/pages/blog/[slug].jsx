@@ -1,7 +1,8 @@
+require("dotenv").config;
 import { GraphQLClient, gql } from 'graphql-request';
 import Head from 'next/head';
 
-const graphcms = new GraphQLClient('https://api-us-east-1.hygraph.com/v2/cl9kxpbzf3ety01t94bu35gv9/master');
+const graphcms = new GraphQLClient(process.env.API_LINK);
 
 const QUERY = gql`
     query Post($slug: String!) {
