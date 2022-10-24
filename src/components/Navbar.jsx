@@ -44,7 +44,7 @@ export default function Navbar() {
             <ul className={`flex justify-between items-center gap-x-6 w-38% list-none max-w-[400px] md:absolute md:left-1/2 md:top-[50px] md:-translate-x-1/2 md:flex-col md:gap-y-3 md:bg-black md:w-[100%] md:p-4 md:rounded-md ${isOpen ? 'flex' : 'hidden'} -md:flex md:max-w-none
             `}>
                 {navLinks.map(({ href, text, targetIsBlank, isRouterLink }) => (
-                        <li key={useId()} onClick={() => setIsOpen(false)} className='w-full'>
+                        <li key={useId()} onClick={() => setIsOpen(false)} className='md:w-full'>
                             {isRouterLink ? (
                                 <NavLink
                                     path={href}
@@ -68,7 +68,7 @@ export default function Navbar() {
                     <div className='burger-bar mb-[5px]'></div>
                     <div className='burger-bar'></div>
                 </div>
-                <div className={`ml-[2px] ${isOpen ? 'block' : 'hidden'}`}>
+                <div className={`${isOpen ? 'block' : 'hidden'}`}>
                     <img className='cross' src='/images/icons/cross.svg' alt='Close.' />
                 </div>
             </div>
