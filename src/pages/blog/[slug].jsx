@@ -11,9 +11,6 @@ const QUERY = gql`
             category {
                 name
             }
-            thumbnail {
-                url
-            }
             content {
                 html
             }

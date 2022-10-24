@@ -9,17 +9,17 @@ const testimonialsData = [
         }
     },
     {
-        quote: 'Ad quod eum iste consequatur vel facilis magni saepe sequi delectus tempore amet excepturi aliquam, optio ex quaerat quae odio sint temporibus omnis maxime blanditiis?',
+        quote: 'Just downloaded the app the other day, just from my brief interaction, I have to say this app really simplifies all the complicated data and helps beginners like me understand what options I want to look at and helps me make make more informed decisions.',
         reviewer: {
-            name: 'Ben Dover',
-            title: 'Pro trader at HSBC'
+            name: 'Andy P.',
+            title: 'TitanFlow User'
         }
     },
     {
-        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit tempore voluptate explicabo possimus dolor quae, deserunt placeat ipsum alias?',
+        quote: 'I began using this app since it was in beta and still use it to this day. It has been amazing seeing the app grow and cater to the traders\' needs. The app provides all the information a trader would need and you can even set you own filters and/or alerts to suit your trading style.',
         reviewer: {
-            name: 'Mike Hawk',
-            title: 'Pro trader at HSBC'
+            name: 'Neil P.',
+            title: 'TitanFlow Ambassador'
         }
     }
 ];
@@ -36,7 +36,7 @@ export default function Testimonials() {
     }
 
     return (
-        <div className='text-center flex flex-col justify-center items-center mb-10'>
+        <section className='text-center flex flex-col justify-center items-center mb-10'>
             <h2 className='text-6xl font-bold text-center my-[80px] md:text-4xl md:my-[40px]'>Testimonials</h2>
             <div className='mb-[80px] w-60% md:w-full'>
                 <blockquote className='text-xl'>{`"${testimonialsData[testimonialIndex].quote}"`}</blockquote>
@@ -61,6 +61,6 @@ export default function Testimonials() {
                     <img className={`w-[30px] ${testimonialIndex === testimonialsData.length - 1 ? 'opacity-40' : ''}`} src="/images/icons/arrow-right.svg" alt="Arrow right." />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

@@ -28,6 +28,6 @@ export default function MyApp({ Component, pageProps }) {
 
 TODO:
 
-	- fix Head not working in dynamic route (blog)
+	- fix Head not working in dynamic route (e.g. blog)
 
 */

@@ -79,23 +79,22 @@ export default function Pricing() {
             </div>
             <ul className='list-none flex justify-between items-stretch w-full sm:flex-col sm:gap-y-8'>
                 {
-                    pricingPlans.map(({ type, cost, includedFeatures, isHighlighted }) => {
-                        return (
+                    pricingPlans.map(({ type, cost, includedFeatures, isHighlighted }) => (
                             <li key={useId()} className={`flex flex-col justify-start items-center w-30% border-[2px] ${isHighlighted ? 'border-sky-500' : 'border-zinc-800'} rounded-xl py-7 px-4 sm:w-full`}>
                                 <h3 className='font-bold text-xl'>{type}</h3>
                                 <h4 className='text-sky-500 font-bold text-5xl my-4'>{`$${isMonthlyBilling ? cost.monthly.displayPrice : cost.yearly.displayPrice}`}</h4>
                                 <span className='text-zinc-500 text-sm mb-4'>{`$${isMonthlyBilling ? cost.monthly.billPrice : cost.yearly.billPrice} billed ${isMonthlyBilling ? 'monthly' : 'yearly'}`}</span>
                                 <ul className='w-full flex flex-col justify-center items-center text-center'>
                                     {
-                                        includedFeatures.map(feature => {
-                                            return <li key={useId()} className='my-3'>{feature}</li>;
-                                        })
+                                        includedFeatures.map(feature => (
+                                            <li key={useId()} className='my-3'>{feature}</li>
+                                        ))
                                     }
                                 </ul>
                                 <a href='https://titanflow.app.link/AxNjMh9Zcmb' target='_blank' className='text-sky-500 mt-auto'>Download</a>
                             </li>
-                        );
-                    })
+                        )
+                    )
                 }
             </ul>
         </div>
